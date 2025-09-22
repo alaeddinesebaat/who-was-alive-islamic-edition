@@ -1,0 +1,72 @@
+/* الخطوط والألوان العامة */
+body {
+  font-family: "Cairo", Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+}
+
+/* العنوان */
+h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* خانة الإدخال والزر */
+input, button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  background: #27ae60;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #219150;
+}
+
+/* النتائج */
+#results {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+/* البطاقة */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* الاسم */
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* العمر */
+.card p {
+  font-size: 16px;
+  color: #555;
+}
