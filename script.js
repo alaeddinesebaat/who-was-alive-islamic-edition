@@ -73,7 +73,7 @@ const people = [
    { name: "ابن خزيمة", birthHijri: 223, deathHijri: 311 },
    { name: "تاج الدين السبكي", birthHijri: 727, deathHijri: 771 },
    { name: "التفتازاني", birthHijri: 712, deathHijri: 792 },
-   { name: "الثعالبي", birthHijri: 1384, deathHijri: 1479 },
+   { name: "الثعالبي", birthHijri: 786, deathHijri: 875 },
    { name: "الونشريسي", birthHijri: 834, deathHijri: 914 },
    { name: "السنوسي", birthHijri: 830, deathHijri: 895 },
    { name: "الأخضري", birthHijri: 920, deathHijri: 953 },
@@ -81,7 +81,7 @@ const people = [
    { name: "الشوكاني", birthHijri: 1173, deathHijri: 1250 },
    { name: "الجبرتي", birthHijri: 1166, deathHijri: 1240 },
    { name: "ابو راس المعسكري", birthHijri: 1165, deathHijri: 1238 },
-   { name: "ابن عابدين", birthHijri: 1244, deathHijri: 1306 },
+   { name: "ابن عابدين", birthHijri: 1198, deathHijri: 1252 },
 ];
 
 function checkYear() {
