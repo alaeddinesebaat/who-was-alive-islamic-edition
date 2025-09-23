@@ -83,8 +83,43 @@ const people = [
    { name: "ابو راس المعسكري", birthHijri: 1165, deathHijri: 1238 },
    { name: "ابن عابدين", birthHijri: 1198, deathHijri: 1252 },
 ];
+const countries = [
+  { name: "الدولة الأموية", startHijri: 41, endHijri: 132, capital: "دمشق" },
+  { name: "الدولة العباسية الأولى", startHijri: 132, endHijri: 233, capital: "بغداد" },
+  { name: "الدولة العباسية الثانية (نفوذ الأتراك)", startHijri: 233, endHijri: 334, capital: "بغداد" },
+  { name: "الدولة العباسية الثالثة (نفوذ البويهيين)", startHijri: 334, endHijri: 447, capital: "بغداد" },
+   { name: "الدولة العباسية الرابعة (السلاجقة)", startHijri: 447, endHijri: 656, capital: "بغداد" },
+  { name: "الدولة العباسية الخامسة في القاهرة (حكم المماليك)", startHijri: 656, endHijri: 923, capital: "القاهرة" },
+  { name: "الدولة الأموية في الأندلس", startHijri: 138, endHijri: 422, capital: "قرطبة" },
+  { name: "فترة ملوك الطوائف الاولى", startHijri: 422, endHijri: 479, capital: "لا توجد عاصمة موحدة" },
+  { name:  "دولة المرابطين", startHijri: 479, endHijri: 541, capital: "مراكش" },
+  { name: "دولة الموحدين", startHijri: 541, endHijri: 622, capital: "مراكش" },
+  { name: "فترة ملوك الطوائف الثانية", startHijri: 622, endHijri: 635, capital: "لا توجد عاصمة موحدة" },
+  { name: "الدولة الفاطمية", startHijri: 297, endHijri: 359, capital: "المهدية" },
+  { name: "الدولة الفاطمية", startHijri: 359, endHijri: 567, capital: "القاهرة" },
+  { name: "الدولة الأيوبية", startHijri: 567, endHijri: 648, capital: "القاهرة" },
+
+];
 
 function checkYear() {
+// البحث عن الدول الموجودة في تلك السنة
+const activeCountries = countries.filter(c => year >= c.startHijri && year <= c.endHijri);
+
+// عرض النتائج للدول
+if (activeCountries.length > 0) {
+  resultsDiv.innerHTML += "<h2>الدول الإسلامية في هذه السنة:</h2>";
+  activeCountries.forEach(c => {
+    resultsDiv.innerHTML += `
+      <div class="card">
+        <h2>${c.name}</h2>
+        <p>العاصمة: ${c.capital}</p>
+      </div>
+    `;
+  });
+} else {
+  resultsDiv.innerHTML += "<p>لا توجد دول مسجلة في هذه السنة.</p>";
+}
+
   const year = parseInt(document.getElementById("yearInput").value);
   const resultsDiv = document.getElementById("results");
   resultsDiv.innerHTML = "";
