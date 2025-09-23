@@ -104,12 +104,34 @@ const countries = [
 function checkYear() {
   const year = parseInt(document.getElementById("yearInput").value);
   const resultsDiv = document.getElementById("results");
+  const countriesDiv = document.getElementById("countriesResults");
+
+  // مسح النتائج السابقة
   resultsDiv.innerHTML = "";
+  countriesDiv.innerHTML = "";
 
   // التحقق من الإدخال
   if (isNaN(year)) {
-    resultsDiv.innerHTML = "<p>من فضلك أدخل سنة صحيحة.</p>";
+    countriesDiv.innerHTML = "<p>من فضلك أدخل سنة صحيحة.</p>";
     return;
+  }
+
+  // البحث عن الدول الموجودة في تلك السنة
+  const activeCountries = countries.filter(c => year >= c.startHijri && year <= c.endHijri);
+
+  // عرض الدول
+  if (activeCountries.length > 0) {
+    countriesDiv.innerHTML += "<h2>الدول الإسلامية في هذه السنة:</h2>";
+    activeCountries.forEach(c => {
+      countriesDiv.innerHTML += `
+        <div class="card country">
+          <h2>${c.name}</h2>
+          <p>العاصمة: ${c.capital}</p>
+        </div>
+      `;
+    });
+  } else {
+    countriesDiv.innerHTML += "<p>لا توجد دول مسجلة في هذه السنة.</p>";
   }
 
   // البحث عن الشخصيات الأحياء
@@ -129,22 +151,6 @@ function checkYear() {
   } else {
     resultsDiv.innerHTML += "<p>لا يوجد شخصيات مسجّلة في هذه السنة.</p>";
   }
-
-  // البحث عن الدول الموجودة في تلك السنة
-  const activeCountries = countries.filter(c => year >= c.startHijri && year <= c.endHijri);
-
-  // عرض الدول
-  if (activeCountries.length > 0) {
-    resultsDiv.innerHTML += "<h2>الدول الإسلامية في هذه السنة:</h2>";
-    activeCountries.forEach(c => {
-      resultsDiv.innerHTML += `
-        <div class="card country">
-          <h2>${c.name}</h2>
-          <p>العاصمة: ${c.capital}</p>
-        </div>
-      `;
-    });
-  } else {
-    resultsDiv.innerHTML += "<p>لا توجد دول مسجلة في هذه السنة.</p>";
-  }
 }
+
+   
