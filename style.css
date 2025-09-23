@@ -42,7 +42,7 @@ button:hover {
   justify-items: center;
 }
 
-/* البطاقة */
+/* البطاقة العامة */
 .card {
   background: white;
   padding: 15px;
@@ -58,6 +58,12 @@ button:hover {
   transform: translateY(-5px);
 }
 
+/* البطاقة الخاصة بالدول */
+.card.country {
+  background: #ffe5b4; /* لون فاتح مختلف لتسهيل التمييز */
+  border: 1px solid #f1c27d; /* حدود خفيفة */
+}
+
 /* الاسم */
 .card h2 {
   font-size: 20px;
@@ -65,8 +71,9 @@ button:hover {
   color: #2c3e50;
 }
 
-/* العمر */
+/* العمر أو تفاصيل أخرى */
 .card p {
   font-size: 16px;
   color: #555;
 }
+
