@@ -141,6 +141,7 @@ const countries = [
   { name: "الدولة الفاطمية", startHijri: 359, endHijri: 567, capital: "القاهرة" },
   { name: "الدولة الأيوبية", startHijri: 567, endHijri: 648, capital: "القاهرة" },
   { name: "الدولة العثمانية", startHijri: 923, endHijri: 1342, capital: "اسطنبول" },
+  { name: "إمارة غرناطة", startHijri: 635, endHijri: 897, capital: "غرناطة" },
 
 ];
 
