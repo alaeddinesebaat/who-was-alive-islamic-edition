@@ -102,7 +102,7 @@ const people = [
      { name: "ابن الأثير", birthHijri: 555, deathHijri: 630 },
      { name: "خليل بن اسحاق الجندي", birthHijri: 767, deathHijri: 700 },
     { name : "الدردير", birthHijri: 1127, deathHijri: 1200 },
-     { name: "أبو العلاء المعري", birthHijri: 363, deathHijri: 973 },
+     { name: "أبو العلاء المعري", birthHijri: 363, deathHijri: 449},
      { name: "أبو نواس", birthHijri: 145, deathHijri: 198 },
      { name: "المتنبي", birthHijri: 303, deathHijri: 354 },
     { name: "ابن عبد البر", birthHijri: 368, deathHijri: 463 },
