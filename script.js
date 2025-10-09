@@ -133,6 +133,10 @@ const people = [
      { name: "عبد الله بن احمد بن حنبل", birthHijri: 213, deathHijri: 290 },
      { name: "أبو علي الجبائي", birthHijri: 235, deathHijri: 303 },
      { name: "الجنيد", birthHijri: 215, deathHijri: 298 },
+     { name: "الأوزاعي", birthHijri: 88, deathHijri: 157 },
+     { name: "الليث بن سعد", birthHijri: 94, deathHijri: 175 },
+     { name: "سفيان الثوري", birthHijri: 97, deathHijri: 161 },
+     { name: "واصل بن عطاء", birthHijri: 80, deathHijri: 131 },
 
 
 ];
