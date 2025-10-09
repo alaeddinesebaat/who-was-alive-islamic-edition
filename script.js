@@ -124,6 +124,17 @@ const people = [
     { name: "ابن عقيل الحنبلي", birthHijri: 431, deathHijri: 513 },
      { name: "ابن الهيثم", birthHijri: 354, deathHijri: 430 },
      { name: "البيروني", birthHijri: 362, deathHijri: 440 },
+       { name: "الدارمي", birthHijri: 195, deathHijri: 280 },
+     { name: "ابن كلاب", birthHijri: 185, deathHijri: 245 },
+     { name: "الحسين الكرابيسي", birthHijri: 190, deathHijri: 248 },
+     { name: "الحارث المحاسبي", birthHijri: 170, deathHijri: 243 },
+     { name: "البيروني", birthHijri: 362, deathHijri: 440 },
+       { name: "حرب الكرماني", birthHijri: 190, deathHijri: 280 },
+     { name: "عبد الله بن احمد بن حنبل", birthHijri: 213, deathHijri: 290 },
+     { name: "أبو علي الجبائي", birthHijri: 235, deathHijri: 303 },
+     { name: "الجنيد", birthHijri: 215, deathHijri: 298 },
+
+
 ];
 const countries = [
   { name: "الدولة الأموية", startHijri: 41, endHijri: 132, capital: "دمشق" },
