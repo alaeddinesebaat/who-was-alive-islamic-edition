@@ -55,10 +55,10 @@ const people = [
    { name: "القرافي", birthHijri: 626, deathHijri: 684 },
    { name: "النووي", birthHijri: 631, deathHijri: 676 },
    { name: "ابن دقيق العيد", birthHijri: 625, deathHijri: 702 },
-   { name: "ابن تيمية", birthHijri: 661, deathHijri: 728 },
-   { name: "ابن القيم", birthHijri: 691, deathHijri: 751 },
-   { name: "الذهبي", birthHijri: 673, deathHijri: 748 },
-   { name: "ابن كثير", birthHijri: 701, deathHijri: 774 },
+   {id: "ibn-taymiyyah", name: "ابن تيمية", birthHijri: 661, deathHijri: 728 },
+   {id: "ibn-qayyim", name: "ابن القيم", birthHijri: 691, deathHijri: 751 },
+   {id: "al-dhahabi", name: "الذهبي", birthHijri: 673, deathHijri: 748 },
+   {id: "ibn-kathir", name: "ابن كثير", birthHijri: 701, deathHijri: 774 },
    { name: "الشاطبي", birthHijri: 730, deathHijri: 790 },
    { name: "ابن رجب", birthHijri: 736, deathHijri: 795 },
    { name: "ابن خلدون", birthHijri: 732, deathHijri: 808 },
@@ -140,6 +140,12 @@ const people = [
 
 
 ];
+const relations = {
+  "ibn-taymiyyah": ["ibn-qayyim", "al-dhahabi", "ibn-kathir"],
+  "ibn-qayyim": ["ibn-taymiyyah"],
+  "al-dhahabi": ["ibn-taymiyyah"],
+  "ibn-kathir": ["ibn-taymiyyah"]
+};
 const countries = [
   { name: "الدولة الأموية", startHijri: 41, endHijri: 132, capital: "دمشق" },
   { name: "العصر العباسي الأول", startHijri: 132, endHijri: 233, capital: "بغداد" },
