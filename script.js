@@ -133,10 +133,10 @@ const people = [
 
 ];
 const relations = {
-  "ibn-taymiyyah": ["ibn-qayyim", "al-dhahabi", "ibn-kathir"],
+  "ibn-taymiyyah": ["ibn-qayyim", "al-dhahabi", "ibn-kathir","taqi-al-din-al-subki","ibn-ata-allah-al-sakandari"],
   "ibn-qayyim": ["ibn-taymiyyah"],
   "al-dhahabi": ["ibn-taymiyyah"],
-  "ibn-kathir": ["ibn-taymiyyah"]
+  "ibn-kathir": ["ibn-taymiyyah"],
 };
 const countries = [
   { name: "الدولة الأموية", startHijri: 41, endHijri: 132, capital: "دمشق" },
