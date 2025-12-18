@@ -130,7 +130,6 @@ const people = [
   { id: "al-awzai", name: "الأوزاعي", birthHijri: 88, deathHijri: 157 },
   { id: "al-laith-bin-saad", name: "الليث بن سعد", birthHijri: 94, deathHijri: 175 },
   { id: "sufyan-al-thawri", name: "سفيان الثوري", birthHijri: 97, deathHijri: 161 },
-];
 
 ];
 const relations = {
