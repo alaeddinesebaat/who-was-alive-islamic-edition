@@ -207,7 +207,9 @@ function checkYear() {
     alive.forEach(p => {
       const age = year - p.birthHijri;
       resultsDiv.innerHTML += `
-        <div class="card">
+         <div class="card person-card"
+         data-id="${p.id || ''}"
+          onclick="highlightRelations('${p.id || ''}')">
           <h2>${p.name}</h2>
           <p>عمره في سنة ${year} هـ هو <strong>${age}</strong> سنة</p>
         </div>
