@@ -287,16 +287,7 @@ const countryRelations = {
 "al-junayd":["abbasid-era-1","abbasid-era-2-turkish"],
 "al-awzai": ["umayyad-caliphate","abbasid-era-1"],
 "al-laith-bin-saad": ["umayyad-caliphate","abbasid-era-1"],
-"sufyan-al-thawri": ["umayyad-caliphate","abbasid-era-1"],
-
-
-
-
-
-
-
-
-
+"sufyan-al-thawri": ["umayyad-caliphate","abbasid-era-1"]
 };
 function checkYear() {
   const year = parseInt(document.getElementById("yearInput").value);
