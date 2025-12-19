@@ -139,25 +139,29 @@ const relations = {
   "ibn-kathir": ["ibn-taymiyyah"],
 };
 const countries = [
-  { name: "الدولة الأموية", startHijri: 41, endHijri: 132, capital: "دمشق" },
-  { name: "العصر العباسي الأول", startHijri: 132, endHijri: 233, capital: "بغداد" },
-  { name: " (نفوذ الأتراك)العصر العباسي الثاني", startHijri: 233, endHijri: 334, capital: "بغداد" },
-  { name: "العصر العباسي الثالث (نفوذ البويهيين)", startHijri: 334, endHijri: 447, capital: "بغداد" },
-   { name: "العصر العباسي الرابع (السلاجقة)", startHijri: 447, endHijri: 656, capital: "بغداد" },
-  { name: "العصر العباسي الخامس (حكم المماليك)", startHijri: 656, endHijri: 923, capital: "القاهرة" },
-  { name: "الدولة الأموية في الأندلس", startHijri: 138, endHijri: 422, capital: "قرطبة" },
-  { name: "فترة ملوك الطوائف الاولى", startHijri: 422, endHijri: 479, capital: "لا توجد عاصمة موحدة" },
-  { name:  "دولة المرابطين", startHijri: 479, endHijri: 541, capital: "مراكش" },
-  { name: "دولة الموحدين", startHijri: 541, endHijri: 622, capital: "مراكش" },
-  { name: "فترة ملوك الطوائف الثانية", startHijri: 622, endHijri: 635, capital: "لا توجد عاصمة موحدة" },
-  { name: "الدولة الفاطمية", startHijri: 297, endHijri: 359, capital: "المهدية" },
-  { name: "الدولة الفاطمية", startHijri: 359, endHijri: 567, capital: "القاهرة" },
-  { name: "الدولة الأيوبية", startHijri: 567, endHijri: 648, capital: "القاهرة" },
-  { name: "الدولة العثمانية", startHijri: 923, endHijri: 1342, capital: "اسطنبول" },
-  { name: "إمارة غرناطة", startHijri: 635, endHijri: 897, capital: "غرناطة" },
-
+  { id: "umayyad-caliphate", name: "الدولة الأموية", startHijri: 41, endHijri: 132, capital: "دمشق" },
+  { id: "abbasid-era-1", name: "العصر العباسي الأول", startHijri: 132, endHijri: 233, capital: "بغداد" },
+  { id: "abbasid-era-2-turkish", name: " (نفوذ الأتراك)العصر العباسي الثاني", startHijri: 233, endHijri: 334, capital: "بغداد" },
+  { id: "abbasid-era-3-buyid", name: "العصر العباسي الثالث (نفوذ البويهيين)", startHijri: 334, endHijri: 447, capital: "بغداد" },
+  { id: "abbasid-era-4-seljuks", name: "العصر العباسي الرابع (السلاجقة)", startHijri: 447, endHijri: 656, capital: "بغداد" },
+  { id: "abbasid-era-5-mamluks", name: "العصر العباسي الخامس (حكم المماليك)", startHijri: 656, endHijri: 923, capital: "القاهرة" },
+  { id: "umayyad-spain", name: "الدولة الأموية في الأندلس", startHijri: 138, endHijri: 422, capital: "قرطبة" },
+  { id: "taifas-1", name: "فترة ملوك الطوائف الاولى", startHijri: 422, endHijri: 479, capital: "لا توجد عاصمة موحدة" },
+  { id: "morabits", name: "دولة المرابطين", startHijri: 479, endHijri: 541, capital: "مراكش" },
+  { id: "muwahhids", name: "دولة الموحدين", startHijri: 541, endHijri: 622, capital: "مراكش" },
+  { id: "taifas-2", name: "فترة ملوك الطوائف الثانية", startHijri: 622, endHijri: 635, capital: "لا توجد عاصمة موحدة" },
+  { id: "fatimid-1", name: "الدولة الفاطمية", startHijri: 297, endHijri: 359, capital: "المهدية" },
+  { id: "fatimid-2", name: "الدولة الفاطمية", startHijri: 359, endHijri: 567, capital: "القاهرة" },
+  { id: "ayubid", name: "الدولة الأيوبية", startHijri: 567, endHijri: 648, capital: "القاهرة" },
+  { id: "ottoman", name: "الدولة العثمانية", startHijri: 923, endHijri: 1342, capital: "اسطنبول" },
+  { id: "granada-emirate", name: "إمارة غرناطة", startHijri: 635, endHijri: 897, capital: "غرناطة" },
 ];
-
+const countryRelations = {
+  "ibn-taymiyyah": ["abbasid-era-5-mamluks"],
+  "ibn-qayyim": ["abbasid-era-5-mamluks"],
+  "al-dhahabi": ["abbasid-era-5-mamluks"],
+  "ibn-kathir": ["abbasid-era-5-mamluks"]
+};
 function checkYear() {
   const year = parseInt(document.getElementById("yearInput").value);
   const resultsDiv = document.getElementById("results");
@@ -178,18 +182,18 @@ function checkYear() {
 
   // عرض الدول
   if (activeCountries.length > 0) {
-    countriesDiv.innerHTML += "<h2>الدول الإسلامية في هذه السنة:</h2>";
-    activeCountries.forEach(c => {
-      countriesDiv.innerHTML += `
-        <div class="card country">
-          <h2>${c.name}</h2>
-          <p>العاصمة: ${c.capital}</p>
-        </div>
-      `;
-    });
-  } else {
-    countriesDiv.innerHTML += "<p>لا توجد دول مسجلة في هذه السنة.</p>";
-  }
+  countriesDiv.innerHTML += "<h2>الدول الإسلامية في هذه السنة:</h2>";
+  activeCountries.forEach(c => {
+    countriesDiv.innerHTML += `
+      <div class="card country" data-id="${c.id || ''}">
+        <h2>${c.name}</h2>
+        <p>العاصمة: ${c.capital}</p>
+      </div>
+    `;
+  });
+} else {
+  countriesDiv.innerHTML += "<p>لا توجد دول مسجلة في هذه السنة.</p>";
+}
 
   // البحث عن الشخصيات الأحياء
   const alive = people.filter(p => year >= p.birthHijri && year <= p.deathHijri);
@@ -212,9 +216,13 @@ function checkYear() {
   }
 }
 function highlightRelations(personId) {
-  // إزالة أي تمييز سابق
-  const allCards = document.querySelectorAll(".person-card");
-  allCards.forEach(card => card.classList.remove("highlight"));
+  // إزالة أي تمييز سابق للشخصيات
+  const allPersonCards = document.querySelectorAll(".person-card");
+  allPersonCards.forEach(card => card.classList.remove("highlight"));
+
+  // إزالة أي تمييز سابق للدول
+  const allCountryCards = document.querySelectorAll(".country");
+  allCountryCards.forEach(card => card.classList.remove("highlight"));
 
   if (!personId) return; // إذا لم يكن للشخص id، لا نفعل شيئًا
 
@@ -227,6 +235,13 @@ function highlightRelations(personId) {
   relatedIds.forEach(id => {
     const card = document.querySelector(`.person-card[data-id='${id}']`);
     if (card) card.classList.add("highlight");
+  });
+
+  // تلوين بطاقات الدول المرتبطة بالشخص
+  const relatedCountries = countryRelations[personId] || []; // تأكد من تعريف countryRelations
+  relatedCountries.forEach(id => {
+    const countryCard = document.querySelector(`.country[data-id='${id}']`);
+    if (countryCard) countryCard.classList.add("highlight");
   });
 }
    
