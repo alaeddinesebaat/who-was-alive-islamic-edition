@@ -225,50 +225,50 @@ const countryRelations = {
 "ibn-khuzaymah": ["abbasid-era-1","abbasid-era-2-turkish"],
 "taj-al-din-al-subki":["abbasid-era-5-mamluks"],
 "al-taftazani":["abbasid-era-5-mamluks"],
-"al-thaalibi"
-"al-wansharisi"
-"al-senussi"
+"al-thaalibi": [],
+"al-wansharisi": [],
+"al-senussi": [],
 "al-akhDhari":["ottoman"],
 "muhammad-ibn-abdul-wahhab":["ottoman"],
 "al-shawkani":["ottoman"],
 "al-jabarti":["ottoman"],
-"abu-ras-al-maaskari"
-"ibn-abidin"
+"abu-ras-al-maaskari": [],
+"ibn-abidin": [],
 "al-izz-bin-abd-al-salam":["abbasid-era-5-mamluks","ayubid"],
 "zakariya-al-ansari":["abbasid-era-5-mamluks","ottoman"],
 "abd-al-qadir-al-jilani":["abbasid-era-4-seljuks"],
 "ibn-hiban":["abbasid-era-1","abbasid-era-2-turkish"],
 "ibn-furk":["abbasid-era-2-turkish","abbasid-era-3-buyid"],
-"ibn-al-jarzi"
+"ibn-al-jarzi": [],
 "ismail-bin-yahya-al-mazni": ["abbasid-era-1","abbasid-era-2-turkish"],
 "abu-ishaq-al-asfarini":["abbasid-era-3-buyid"],
 "taqi-al-din-al-subki":["abbasid-era-5-mamluks"],
 "abu-ismail-al-harawi":["abbasid-era-4-seljuks","abbasid-era-3-buyid"],
-"abd-al-wahid-bin-ashir"
+"abd-al-wahid-bin-ashir": [],
 "ibn-ata-allah-al-sakandari":["abbasid-era-5-mamluks"],
-"muhammad-bin-ajroum"
+"muhammad-bin-ajroum": [],
 "najm-al-din-al-tufi":["abbasid-era-5-mamluks"],
 "abu-bakr-al-jassas": ["abbasid-era-3-buyid","abbasid-era-2-turkish"],
 "shams-al-umma-sarakhsi":["abbasid-era-4-seljuks","abbasid-era-3-buyid"],
 "ala-al-din-al-samarqandi":["abbasid-era-4-seljuks"],
 "ala-al-din-al-kasani":["abbasid-era-4-seljuks"],
 "ibn-al-ather":["abbasid-era-4-seljuks"],
-"khalil-bin-ishaq-al-jundi"
-"al-dardir"
+"khalil-bin-ishaq-al-jundi": [],
+"al-dardir": [],
 "abu-ala-al-maarri":["abbasid-era-4-seljuks","abbasid-era-3-buyid"],
 "abu-nuwas": ["abbasid-era-1"],
 "al-mutanabbi": ["abbasid-era-3-buyid","abbasid-era-2-turkish"],
 "ibn-abdul-bar": ["umayyad-spain","taifas-1"],
 "yaqut-al-hamawi":["abbasid-era-4-seljuks"],
-"ibn-battuta"
-"ibn-khulkan"
+"ibn-battuta": [],
+"ibn-khulkan": [],
 "wasil-bin-ata": ["umayyad-caliphate","abbasid-era-1"],
 "amr-bin-ubayd": ["umayyad-caliphate","abbasid-era-1"],
 "abu-hadheel-al-allaf":["abbasid-era-1","abbasid-era-2-turkish"],
 "al-nizam": ["abbasid-era-1"],
 "abu-hashim-al-jubai":["abbasid-era-2-turkish"],
 "abu-madin-al-tlemsani":["morabits","muwahhids"],
-"al-mulla-sadra"
+"al-mulla-sadra": [],
 "al-suhrawardi-maktul":["ayubid"],
 "al-kindi":["abbasid-era-1","abbasid-era-2-turkish"],
 "al-farabi":["abbasid-era-2-turkish"],
